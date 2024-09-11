@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+ 		 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+  						
+<!--	mybatis-config.xml :: MyBatis Framework  MetaData -->
+<configuration>
+
+	<!-- JDBC 정보는 commonservice13.xml에 -->
+	
+	<!-- 2. 기타 설정정보 :: [MyBatis_Home]/mybatis-3.X.X.pdf 참조 -->
+	<settings>
+		<setting name="callSettersOnNulls" value="false"/>
+	</settings>	
+	
+	<!-- 3. FQCN(Full Qualified Class Name) Alias(별칭관리) -->
+	<typeAliases>
+		<typeAlias alias="user" type="mybatis.service.domain.User" />
+		<typeAlias alias="search" type="mybatis.service.domain.Search" />
+	</typeAliases>
+	
+
+	 <!-- SQL Definition :: file include -->
+	 <!-- Mybatis에서는 SQL만 관리 -->
+	 <mappers>
+		<mapper resource="sql/UserMapper10.xml"/>
+	 </mappers>
+
+</configuration>
